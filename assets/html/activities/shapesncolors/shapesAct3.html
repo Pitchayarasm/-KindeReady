@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>KindeReady: Shapes & Colors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../css/shapesncolors/shapesActs.css">
+
+    <style>
+        a img {
+            box-shadow: 0 8px 6px -6px #888888;
+            transition: box-shadow 0.085s;
+        }
+
+        a img:hover {
+            cursor: pointer;
+        }
+
+        a img:active {
+            cursor: pointer;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div id="main" class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+
+                    <!-- SideBar -->
+                    <div id="studentSidebar" class="col-lg-2" style="padding-top: 5px; background: url('https://www.toptal.com/designers/subtlepatterns/patterns/crossword.png')">
+                        <!-- Sidebar Content -->
+                        <!-- Avatar -->
+                        <div class="row">
+                            <div id="avatarContainer" class="col-lg-12">
+                                <img id="studentAvatar" src="" style="border-radius: 100px; border: 1px solid black; background-color: #ffffff; box-shadow: inset 0 0 8px #333333" />
+                                <hr>
+                            </div>
+                        </div>
+                        <!-- Student Name -->
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h5><span id="studentName"></span></h5>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Student Awards/Badges -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Student Progress -->
+                                <div class="row">
+                                    <div class="col-lg-12 studentProgress">
+                                        <a href="/shapes/main" data-unit="1">
+                                            <h6 style="color: black">Shapes & Colors:</h6>
+                                        </a>
+                                        <div class="progress">
+                                            <div id="SnC" class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                                                style="width: 0%; transition: width 1s; transition-timing-function: ease"><span
+                                                    id="SnCActCount" style="color: white; font-weight: bold"></span></div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12 studentProgress">
+                                        <a id="toLetters" href="/letter/main" data-unit="2">
+                                            <h6 style="color: black">Letter Recognition:</h6>
+                                        </a><span id="onlyOnDesktop">*desktop only</span>
+                                        <div class="progress">
+                                            <div id="letRec" class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                                                style="width: 0%; transition: width 1s; transition-timing-function: ease"><span
+                                                id="letActCount" style="color: white; font-weight: bold"></span></div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <footer>
+                            <hr>
+                            <div class="col-lg-12 sidebarBtn">
+                                <a id="changeLink" href="/change"><button id="change" class="btn btn-sm btn-primary clearSession">Change Student</button></a>
+                            </div>
+                            <br>
+
+                            <div class="col-lg-12 sidebarBtn">
+                                <a id="logoutLink" href="/logout""><button id="logout" class="btn btn-sm btn-danger clearSession">Logout</button></a>
+                            </div>
+                            <br>
+                        </footer>
+                    </div>
+
+                    <div id="actSection" class="col-lg-10" style="padding-top: 5px">
+                        
+                        <div class="row">
+
+                            <!-- Title -->
+                            <div class="col-lg-6 title">
+                                <img src="../../../images/shapes_colors/scTitle.png" style="padding-top: 10px; height: 50px"/>
+                            </div>
+                            <div id="actName" class="col-lg-6" style="position: absolute; top: 10px; right: 0">
+                                <div class="card text-white bg-dark mb-3" style="float: right">
+                                    <div class="card-header text-center"><em>Activity 3</em></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12"><hr></div>
+
+                            <!-- Activity Description -->
+                            <div class="col-lg-12" style="font-family: 'Nunito', sans-serif">
+                                <em><strong>Activity Description:</strong></em>
+                                    <ul type="square">
+                                        <li>Lesson Type: <strong>SD</strong> - Student Driven</li>
+                                        <li>Estimated Time: 15 - 20 min</li>
+                                        <li>Instructions: <strong>It's the student's turn!</strong> Answer the following questions, matching the correct shape to the correct color. Try to minimize guidance, as best you can. The objective is to allow your student to demonstrate their understanding and recognition of the colors that have been covered in the previous excercises. You will be able to advance, after 6 matches have been made.</li>
+                                    </ul>
+                                <hr>
+                            </div>
+
+                            <!-- Activity -->
+                            <div class="col-lg-12">
+                                <div class="row">
+
+                                    <!-- Quiz Card -->
+                                    <div class="col-sm-12">
+                                        <div id="gameCard" class="card">
+                                            <div id="shapeWrapper" class="card-header">
+                                                <div class="row">
+                                                    <!-- SQUARE -->
+                                                    <div id="sC1" class="col-sm-3">
+                                                        <a class="shape" data-name="square"><img src="../../../images/shapes_colors/square_noFill.png" alt="Square" class="img-thumbnail" style="width: 100px"/></a>
+                                                    </div>
+                                                    <!-- CIRCLE -->
+                                                    <div id="sC2" class="col-sm-3">
+                                                        <a class="shape" data-name="circle"><img src="../../../images/shapes_colors/circle_noFill.png" alt="Circle" class="img-thumbnail" style="width: 100px"/></a>
+                                                    </div>
+                                                    <!-- RECTANGLE -->
+                                                    <div id="sC3" class="col-sm-3">
+                                                        <a class="shape" data-name="rectangle"><img src="../../../images/shapes_colors/rectangle_noFill.png" alt="Rectangle" class="img-thumbnail" style="width: 100px"/></a>
+                                                    </div>
+                                                    <!-- TRIANGLE -->
+                                                    <div id="sC4" class="col-sm-3">
+                                                        <a class="shape" data-name="triangle"><img src="../../../images/shapes_colors/triangle_noFill.png" alt="Triangle" class="img-thumbnail" style="width: 100px"/></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div id="answerArea" class="card-body" style="background: url('https://www.toptal.com/designers/subtlepatterns/patterns/grey.png')">
+                                                <div class="row">
+
+                                                    <!-- Start Activity Button -->
+                                                    <div id="Start" class="col-sm-12" style="display: block">
+                                                        <button id="start" class="btn btn-large btn-outline-success" style="width:50%; position: relative; top: 70px"><h1 style="margin-bottom: 0"><strong>START</strong></h1></button>
+                                                    </div>
+
+                                                    <!-- Activity Body -->
+                                                    <div class="col-sm-12 activity3" style="display: none">
+                                                        <br>
+                                                        <div class="row">
+                                                            <!-- Color Prompt -->
+                                                            <div id="colorAnswer" class="col-sm-5">
+                                                                <h1><strong><span id="colorChoice">________</span></strong></h1>
+                                                            </div>
+                                                            <!-- Student Solution -->
+                                                            <div id="qDisplay" class="col-sm-2">
+                                                                <img id="questionBlock" src="../../../images/shapes_colors/question_block.png" alt="Student Solution" class="img-thumbnail" style="width: 100px"/>
+                                                            </div>
+                                                            <!-- Shape Prompt -->
+                                                            <div id="shapeAnswer" class="col-sm-5 align-middle">
+                                                                <h1><strong><span id="shapeChoice">________</span></strong></h1>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <br>
+                                                    </div>
+
+                                                    <div class="col-sm-12 text-center activity3" style="display: none">
+                                                        <button id="checkAnswer" type="button" class="btn btn-success">Check Answer</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="colorWrapper" class="card-footer text-muted">
+                                                <div class="row">
+                                                    <!-- RED -->
+                                                    <div id="cC1" class="col-sm-3 text-center">
+                                                        <a class="color" data-name="red"><img src="../../../images/shapes_colors/paint_red.png" alt="Red" class="img-thumbnail"/></a>
+                                                    </div>
+                                                    <!-- BLUE -->
+                                                    <div id="cC2" class="col-sm-3 text-center">
+                                                            <a class="color" data-name="blue"><img src="../../../images/shapes_colors/paint_blue.png" alt="Blue" class="img-thumbnail"/></a>
+                                                    </div>
+                                                    <!-- YELLOW -->
+                                                    <div id="cC3" class="col-sm-3 text-center">
+                                                            <a class="color" data-name="yellow"><img src="../../../images/shapes_colors/paint_yellow.png" alt="Yellow" class="img-thumbnail"/></a>
+                                                    </div>
+                                                    <!-- GREEN -->
+                                                    <div id="cC4" class="col-sm-3 text-center">
+                                                            <a class="color" data-name="green"><img src="../../../images/shapes_colors/paint_green.png" alt="Green" class="img-thumbnail"/></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Back & Next Buttons -->
+                            <div class="col-sm-12" style="padding-bottom: 10px; padding-top: 10px">
+                                <hr>
+                                <div class="row prePost">
+                                    <div id="pre" class="col-sm-2">
+                                        <a href="/shapes/act2"><button id="previousAct" class="btn btn-outline-dark btn-sm">&#8592; Previous</button></a>
+                                    </div>
+
+                                    <div id="placeholder" class="col-sm-8"></div>
+
+                                    <div id="post" class="col-sm-2">
+                                        <a href="/shapes/sum"><button id="nextAct" data-act="act3" class="btn btn-outline-dark btn-sm">Next &#8594;</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="correctModal" tabindex="-1" role="dialog" aria-labelledby="correctModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="correctModalTitle"><strong>Great Job! You got it!</strong></h2>
+                    <button type="button" class="close closeNext" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body text-center">
+                    <img src="../../../images/shapes_colors/correct-lg.png"/>
+                    <span id="nextReady" style="display: none">You're ready for the next lesson! You can now click 'Next' (at the bottom of your screen) to move on. Or, keep on matching those shapes 'n colors!</span>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success closeNext">Next Shape &#8594;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="incorrectModal" tabindex="-1" role="dialog" aria-labelledby="incorrectModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="incorrectModalTitle"><strong>Whoops! Try Again.</strong></h4>
+                    <button type="button" class="close closeRetry" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger closeRetry">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="../../../js/activities/shapesncolors/shapesAct3.js"></script>
+    <script src="../../../js/sidebar.js"></script>
+</body>
+</html>

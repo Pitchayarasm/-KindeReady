@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>KindeReady</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/usersStyle.css">
+
+</head>
+<body>
+    <div id="wrapper" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 userTitle">
+                        <div class="row">
+                            <div id="siteTitle" class="col-md-6">
+                                <strong style="font-size: 50px; padding: 5px">KindeReady</strong>
+                            </div>
+                            <div id="loggedInUser" class="col-md-6 text-right" style="padding-top: 10px">
+                                <strong class="easyRead badge badge-dark" style="font-size: 28px; font-style: italic; height: 100%; padding-top: 20px; padding-right: 20px">Welcome, <span id="loginUser"></span>!</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h5 id="studentHeader" style="margin-bottom: 0">Students</h5><button id="newStudentBtn" type="button" class="btn btn-sm btn-primary easyRead" data-toggle="modal" data-target="#exampleModal">Add</button><button id="backToStudents" type="button" class="btn btn-sm btn-secondary easyRead">&#8592; Back</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="studentPane" class="card-body">
+                                <div class="row">
+                                    <div id="firstStudentAdd" class="col-lg-12 text-center">
+                                        <h3 id="clickToBegin" class="beginh3">Click</h3><button id="firstStudent" type="button" class="btn btn-outline-primary easyRead" data-toggle="modal" data-target="#exampleModal">Add Student</button><h3 class="beginh3">to Begin</h3>
+                                    </div>
+
+                                    <!-- Student Name -->
+                                    <div id="students" class="col-lg-6">
+                                        <ul type="none" id="currentStudent" style="margin-bottom: 0">
+
+                                        </ul>
+                                    </div>
+
+                                    <!-- Edit/Delete -->
+                                    <div id="studentInfo" class="col-lg-6 studentProgress" style="display: none; border-left: 1px dotted black">
+
+                                        <!-- Avatar -->
+                                        <div class="row">
+                                            <div class="col-lg-12 text-center">
+                                                <img id="studentAvatar" src="" style="border-radius: 100px; border: 1px solid black; background-color: #ffffff; box-shadow: inset 0 0 8px #333333"/>
+                                                <hr>
+                                            </div>
+                                        </div>
+                
+                                        <div class="row">
+                                            <div class="col-lg-12 text-center">
+                                                <h5><span id="studentName"></span></h5>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <!-- Student Awards/Badges -->
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                
+                                                <!-- Student Progress -->
+                                                <div class="row">
+                                                    <div class="col-lg-12 studentProgress">
+                                                        <a href="/shapes/main" data-unit="1" style="color: black"><h6><strong><span class="fa fa-puzzle-piece"></span>  Shapes & Colors:</strong></h6></a>
+                                                        <div class="progress">
+                                                            <div id="SnC" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuemin="0" aria-valuemax="100"><span id="SnCActCount" style="color: white; font-weight: bold"></span></div>
+                                                        </div>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="row">
+                                                    <div class="col-lg-12 studentProgress">
+                                                            <a id="toLetters" href="/letter/main" data-unit="2" style="color: black; display: inline-block"><h6><strong><span class="fa fa-puzzle-piece"></span>  Letter Recognition:</strong></h6></a><span id="onlyOnDesktop">*desktop only</span>
+                                                        <div class="progress">
+                                                            <div id="letRec" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%; transition: width 1s; transition-timing-function: ease"><span id="letActCount" style="color: white; font-weight: bold"></span></div>
+                                                        </div>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div id="getStartedMsg" class="col-lg-12 text-center" style="font-family: 'Nunito', sans-serif; position: absolute">
+                                                        <p><span id="desktopText">Now let's have some fun!</span> Click on the unit you would like to start!</p>
+                                                        </br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+
+                <div id="foot" class="row">
+                    <div class="col-md-2">
+                        <button id="addStudentBtn" type="button" class="btn btn-primary easyRead" data-toggle="modal" data-target="#exampleModal">Add Student</button>
+                    </div>
+                    <div class="col-md-8"></div>
+                    <div id="logoutUserBtn" class="col-md-2">
+                        <a href="/logout"><button id="logout" class="btn btn-danger easyRead">Logout</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for Signing Up Student -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div id="modalAdd" class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #f8f8f8">
+                    <h5 class="modal-title" id="exampleModalLabel">Add a Student:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body studentAdd">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <label for="firstname"><b>First Name: </b></label> 
+                                <input tabindex="1" id="f1" type="text" placeholder="Enter Firstname" name="fname" required>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastname"><b>Last Name: </b></label>
+                            <input tabindex="2" id="f2" type="text" placeholder="Enter Lastname" name="lname" style="margin-bottom: 16px" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <label for="age"><b>Age: </b></label>
+                                <input tabindex="3" id="f3" type="age" placeholder="Enter Age" name="age">
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <label for="picture"><b>Avatar:</b></label>
+                    <p>Please choose a student avatar:</p>
+                    <div class="row avatar text-center">
+                        <div class="col-sm-6 avatarOption">
+                            <div class="form-check">
+                                <label>
+                                    <input tabindex="4" class="form-check-input" type="radio" name="exampleRadios" id="ava1" data-src="../images/avatars/cat.png" checked="checked">
+                                    <img src="../images/avatars/cat.png" alt="cat">
+                                </label>
+                            </div>
+                        </div>
+                    <div class="col-sm-6 avatarOption text-center">
+                        <div class="form-check">
+                                <label>
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="ava2" data-src="../images/avatars/dog.png">
+                                    <img src="../images/avatars/dog.png" alt="dog">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row avatar text-center">
+                        <div class="col-sm-6 avatarOption">
+                            <br>
+                            <div class="form-check">
+                                <label>
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="ava3" data-src="../images/avatars/lion.png">
+                                    <img src="../images/avatars/lion.png" alt="lion">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 avatarOption">
+                            <br>
+                            <div class="form-check">
+                                <label>
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="ava4" data-src="../images/avatars/pig.png">
+                                    <img src="../images/avatars/pig.png" alt="pig">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="padding-bottom: 0">
+                        <button tabindex="5" type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button tabindex="6" type="button" class="btn btn-sm btn-primary" id="sSubmit">Create Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Updating Student -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div id="modalUpdate" class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #f8f8f8">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Student:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body studentUpdate">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <label for="firstname"><b>First Name: </b></label> 
+                                <input tabindex="1" id="ef1" type="text" placeholder="Enter Firstname" name="fname" required>
+                            </p>
+                            <p>
+                                <label for="age"><b>Age: </b></label>
+                                <input tabindex="3" id="ef3" type="number" placeholder="Enter Age" name="age">
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastname"><b>Last Name: </b></label>
+                            <input tabindex="2" id="ef2" type="text" placeholder="Enter Lastname" name="lname" required>
+                        </div>
+                    </div>
+                    <br>
+                    <label for="picture"><b>Avatar:</b></label>
+                    <p>Please choose a student avatar:</p>
+                    <div class="row avatar text-center">
+                        <div class="col-sm-6 avatarOption">
+                            <div class="form-check">
+                                <label>
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="ava1" data-src="../images/avatars/cat.png">
+                                    <img src="../images/avatars/cat.png" alt="cat">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 avatarOption text-center">
+                            <div class="form-check">
+                                <label>
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="ava2" data-src="../images/avatars/dog.png">
+                                    <img src="../images/avatars/dog.png" alt="dog">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row avatar text-center">
+                        <div class="col-sm-6 avatarOption">
+                            <div class="form-check">
+                                <label>
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="ava3" data-src="../images/avatars/lion.png">
+                                    <img src="../images/avatars/lion.png" alt="lion">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 avatarOption">
+                            <div class="form-check">
+                                <label>
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="ava4" data-src="../images/avatars/pig.png">
+                                    <img src="../images/avatars/pig.png" alt="pig">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="padding-bottom: 0">
+                        <button tabindex="5" type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button tabindex="6" type="button" class="btn btn-sm btn-primary" id="eSubmit" data-dismiss="modal">Update Student</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../js/user.js"></script>
+</body>
+</html>

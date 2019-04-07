@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300');
+
+html, body {
+    font-family: "Gloria Hallelujah", cursive;
+}
+
+body {
+    background: url("../../images/welcome_bg/kindeready-bg-3.png");
+}
+
+.col-lg-10 {
+    background-color: white;
+}
+
+.btn, .modal {
+    font-family: 'Nunito', sans-serif;
+}
+
+#studentAvatar {
+    width: 100%;
+}
+
+#studentSidebar {
+    border: 1px black;
+    border-style: solid dashed solid solid;
+}
+
+#activityList {
+    border: 1px black;
+    border-style: solid solid solid none;
+}
+
+.sidebarBtn {
+    text-align: center;
+}
+
+#actSection {
+    border: 1px black;
+    border-style: solid solid solid none;
+}
+
+#shapesList {
+    text-align: right;
+}
+
+#colorsList {
+    text-align: left;
+}
+
+#pre {
+    text-align: left;
+}
+
+#post {
+    text-align: right;
+}
+
+#cC1 img, #cC2 img, #cC3 img, #cC4 img, #brush0 img, #brush1 img, #brush2 img, #brush3 img {
+    height: 100px;
+}
+
+#gameCard {
+    text-align: center;
+}
+
+#colorAnswer {
+    text-align: right;
+}
+
+#shapeAnswer {
+    text-align: left;
+}
+
+#answerArea {
+    height: 250px;
+}
+
+#colorChoice, #shapeChoice {
+    position: relative;
+    top: 25px;
+}
+
+#start {
+    font-family: "Gloria Hallelujah", cursive;
+}
+
+.gamePiece {
+    border: none;
+}
+
+.brush {
+    box-shadow: 0 8px 6px -6px #888888;
+    transition: box-shadow 0.085s;
+}
+
+.brush:hover {
+    cursor: pointer;
+}
+
+.brush:active {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+#onlyOnDesktop {
+    display: none;
+}
+
+.answerIcon {
+    margin-top: 5px;
+}
+
+select.form-control {
+    vertical-align: middle;
+}
+
+#main {
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    .activities {
+        padding: 0 180px;
+    }
+
+    #avatarContainer {
+        text-align: center;
+    }
+
+    #onlyOnDesktop {
+        display: block;
+        font-size: 0.8rem;
+        color: red;
+        padding: 0;
+        font-family: 'Nunito', sans-serif;
+    }
+}
+
+@media screen and (max-width: 991.5px) {
+    #studentAvatar {
+        width: initial;
+    }
+
+    #studentSidebar {
+        border-style: solid;
+        margin-bottom: 15px;
+    }
+
+    #activityList {
+        border-style: solid;
+        margin-bottom: 10px;
+    }
+
+    #act1, #act2, #act3, #summary {
+        width: 100%;
+    }
+
+    .sidebarBtn {
+        display: inline-block;
+    }
+
+    #changeLink {
+        position: absolute;
+        left: 0;
+        bottom: -14px;
+    }
+
+    #logoutLink {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+    }
+
+    #actSection {
+        border-style: solid;
+    }
+
+    #shapesList ul, #colorsList ul {
+        text-align: center;
+    }
+
+    #toLetters h6 {
+        display: inline-block;
+    }
+
+    #onlyOnDesktop {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 767.5px) {
+
+    .activities {
+        padding: 0 44px;
+    }
+
+    .activities p {
+        font-size: 40px;
+    }
+
+    #act1, #act2, #act3, #summary {
+        width: 442px;
+    }
+
+    #actName {
+        display: none;
+    }
+
+    #colorChoice, #shapeChoice {
+        font-size: 1.25rem;
+    }
+
+    #qDisplay {
+        padding: 0;
+    }
+
+    #main {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 575.5px) {
+
+    #shapesList {
+        margin-bottom: 16px;
+        border-bottom: 1px dashed black;
+    }
+    
+    #shapesList ul li {
+        text-align-last: justify;
+        font-size: 30px;
+        padding: 0 50px;
+    }
+
+    #colorsList ul li {
+        text-align-last: justify;
+        font-size: 30px;
+        padding: 0 50px;
+    }
+
+    #pre, #post {
+        text-align: center;
+    }
+
+    #pre {
+        margin-bottom: 15px;
+    }
+
+    #shapeWrapper, #colorWrapper {
+        text-align: center;
+        padding: 5px;
+    }
+
+    #sC1, #sC2, #sC3, #sC4, #cC1, #cC2, #cC3, #cC4, #pic0, #pic1, #pic2, #pic3, #brush0, #brush1, #brush2, #brush3 {
+        max-width: 25%;
+    }
+
+    #cC1 img, #cC2 img, #cC3 img, #cC4 img, #brush0 img, #brush1 img, #brush2 img, #brush3 img {
+        height: auto;
+    }
+
+    #start h1 {
+        font-size: 1.5rem;
+    }
+
+    #colorChoice, #shapeChoice {
+        position: initial;
+    }
+
+    #colorAnswer, #shapeAnswer {
+        text-align: center;
+    }
+
+    #answerArea {
+        height: 365px;
+    }
+
+    #correctModalTitle {
+        font-size: 1.25rem;
+    }
+
+    #picHolder, #brushHolder {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #shapesList, #colorsList {
+        text-align: center;
+    }
+
+    #shapesList ul li {
+        width: 100%;
+        font-size: 20px;
+        text-align-last: justify;
+        padding: 0 30px;
+    }
+
+    #colorsList ul li {
+        width: 100%;
+        font-size: 20px;
+        text-align-last: justify;
+        padding: 0 30px;
+    }
+
+    .counter h1 {
+        font-size: 1.75rem;
+    }
+
+    .prePost {
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+    }
+
+    #pre {
+        display: contents;
+    }
+
+    #post {
+        display: contents;
+    }
+
+    #placeholder {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .title img {
+        width: 100%;
+    }
+}

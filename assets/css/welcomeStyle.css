@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300');
+
+html, body {
+height: 100%;
+max-width: 100%;
+overflow-x: hidden;
+font-family: "Gloria Hallelujah", cursive;
+color: black;
+background: url("../images/welcome_bg/kindeready-bg-3.png");
+}
+
+.btn, .modal {
+  font-family: 'Nunito', sans-serif;
+}
+
+.card {
+  width: 400px;
+}
+
+img {
+  border-radius: 25%;
+}
+
+.bd-placeholder-img {
+font-size: 1.125rem;
+text-anchor: middle;
+}
+
+input {
+  margin-bottom: 15px;
+}
+
+#semailLabel, #spasswordLabel {
+  padding-right: 0;
+  text-align: right;
+}
+
+.welcomeInLabel {
+  margin-bottom: 0;
+}
+
+#firstname, #lastname {
+  margin-bottom: 0;
+}
+
+#welcomeBox {
+  max-width: 25rem;
+  margin:150px auto;
+  align-items: center;
+  border: 1px solid lightgrey;
+  box-shadow: 0 8px 6px -6px #000000;
+}
+
+@media screen and (max-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+
+  .card {
+    width: initial;
+  }
+
+  #welcomeForm {
+    max-width: none;
+  }
+  
+  #welcomeBox {
+    max-width: none;
+    margin: 100px auto;
+    align-items: center;
+    border: 1px solid lightgrey;
+    box-shadow: 0 8px 6px -6px #000000;
+  }
+
+  #welcomeBox p {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  #welcomeBox button {
+    margin: 0 20px;
+    transform: scale(1.25);
+  }
+
+  #modalCreate, #modalSignin {
+    max-width: 92vh;
+  }
+
+  #modalCreate h5, #modalSignin h5 {
+    font-size: 2rem;
+  }
+
+  #modalCreate .modal-body, #modalSignin .modal-body {
+    font-size: 1.25rem;
+  }
+
+  #firstname {
+    margin-bottom: 15px;
+  }
+
+  #modalCreate .modal-footer button, #modalSignin .modal-footer button {
+    margin: 0 20px;
+    transform: scale(1.25);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+
+  #welcomeForm {
+    padding: 0;
+    margin: 0;
+  }
+
+  #firstname {
+    margin-bottom: 15px;
+  }
+
+  #email {
+    margin-bottom: 30px;
+  }
+
+#semailLabel, #spasswordLabel {
+  padding-right: 0;
+  text-align: left;
+}
+}
+
+@media screen and (max-width:480px) {
+  #welcomeForm {
+    padding: 0;
+    margin: 0;
+  }
+
+  #semail {
+    width: 72%;
+  }
+
+  .modal-title {
+    font-size: 1.1rem;
+  }
+}

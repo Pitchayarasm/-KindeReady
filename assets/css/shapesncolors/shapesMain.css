@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
+#act1, #act2, #act3, #summary {
+    padding-top: 5px; 
+    border-style: solid; 
+    margin: 5px;
+    width: 442px;
+    height: 234px; 
+    float: left;
+    border-color: black;
+    border-radius: 10%;
+    text-align: center;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: bold;
+    font-size: 50px;
+    color: #222222;
+}
+
+#act1:hover, #act2:hover, #act3:hover, #summary:hover {
+    box-shadow: 0 8px 6px -6px #000000;
+    transition: box-shadow 0.1s;
+    border: 1px solid black;
+}
+
+#act1:active, #act2:active, #act3:active, #summary:active {
+    border: 2px solid black;
+    box-shadow: none;
+}
+
+p {
+    padding-left: 40px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Gloria Hallelujah", cursive;
+    text-decoration-color: blue;
+    font-weight: bold;
+}
+
+#act1{
+    background: url("../../images/shapes_colors/shapes_act1.png") no-repeat;
+    background-size: 320px 200px;
+    background-position: center bottom;
+}
+
+#act2 {
+    background: url("../../images/shapes_colors/shapes_act2.png") no-repeat;
+    background-size: 442px 215px;
+    background-position: center bottom;
+}
+
+#act3{
+    background: url("../../images/shapes_colors/shapes_act3.png") no-repeat;
+    background-size: 400px 180px;
+    background-position: center bottom;
+
+}
+
+#summary {
+    background: url("../../images/shapes_colors/shapes_summary.jpg") no-repeat;
+    background-size: 440px 200px;
+    background-position: center bottom;
+}
+
+p {
+    text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300');
+
+html, body {
+    font-family: "Gloria Hallelujah", cursive;
+}
+
+body {
+    background: url("../../images/welcome_bg/kindeready-bg-3.png");
+}
+
+.col-lg-10 {
+    background-color: white;
+}
+
+.activities {
+    margin-bottom: 15px;
+}
+
+.btn, .modal {
+    font-family: 'Nunito', sans-serif;
+}
+
+#studentAvatar {
+    width: 100%;
+}
+
+#studentSidebar {
+    border: 1px black;
+    border-style: solid dashed solid solid;
+}
+
+#activityList {
+    border: 1px black;
+    border-style: solid solid solid none;
+}
+
+.sidebarBtn {
+    text-align: center;
+}
+
+#onlyOnDesktop {
+    display: none;
+}
+
+@media screen and (max-width: 1199.5px) {
+    .activities {
+        padding: 0 180px;
+    }
+
+    #avatarContainer {
+        text-align: center;
+    }
+
+    #onlyOnDesktop {
+        display: block;
+        font-size: 0.8rem;
+        color: red;
+        padding: 0;
+        font-family: 'Nunito', sans-serif;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #studentAvatar {
+        width: initial;
+    }
+
+    #studentSidebar {
+        border-style: solid;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    #activityList {
+        border-style: solid;
+        margin-bottom: 10px;
+    }
+
+    #act1, #act2, #act3, #summary {
+        width: 100%;
+    }
+
+    .sidebarBtn {
+        display: inline-block;
+    }
+
+    #changeLink {
+        position: absolute;
+        left: 0;
+        bottom: -14px;
+    }
+
+    #logoutLink {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+    }
+
+    #toLetters h6 {
+        display: inline-block;
+    }
+
+    #onlyOnDesktop {
+        float: right;
+    }
+
+}
+
+@media screen and (max-width: 767.5px) {
+    .activities {
+        padding: 0 44px;
+    }
+
+    #act1, #act2, #act3, #summary {
+        width: 442px;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #act1, #act2, #act3, #summary {
+        width: 100%;
+    }
+
+    .activities p {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .title img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
+
+
+#act1, #act2, #act3, #summary {
+    padding-top: 5px; 
+    border-style: solid; 
+    margin: 5px;
+    width: 442px;
+    height: 234px; 
+    float: left;
+    border-color: black;
+    border-radius: 10%;
+    text-align: center;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: bold;
+    font-size: 50px;
+    color: #222222;
+}
+
+#act1:hover, #act2:hover, #act3:hover, #summary:hover {
+    box-shadow: 0 8px 6px -6px #000000;
+    transition: box-shadow 0.1s;
+    border: 1px solid black;
+}
+
+#act1:active, #act2:active, #act3:active, #summary:active {
+    border: 2px solid black;
+    box-shadow: none;
+}
+
+p {
+    padding-left: 40px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Gloria Hallelujah", cursive;
+    text-decoration-color: blue;
+    font-weight: bold;
+}
+
+#act1{
+    background: url("../../images/letter_recog/letter_act1.png") no-repeat;
+    background-size: 300px 150px;
+    background-position: center bottom;
+}
+
+#act2 {
+    background: url("../../images/letter_recog/letter_act2.png") no-repeat;
+    background-size: 300px 200px;
+    background-position: center bottom;
+}
+
+#act3{
+    background: url("../../images/letter_recog/letter_act3.png") no-repeat;
+    background-size: 300px 200px;
+    background-position: center bottom;
+
+}
+
+#summary {
+    background: url("../../images/letter_recog/letter_summary.png") no-repeat;
+    background-size: 300px 150px;
+    background-position: center bottom;
+}
+
+p {
+    text-align: center;
+}

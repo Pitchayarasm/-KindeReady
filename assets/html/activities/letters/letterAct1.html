@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>KindeReady: Letter Recognition</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+        @import url('https://fonts.googleapis.com/css?family=Nunito:300');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Gloria Hallelujah", cursive;
+        }
+        
+        html {
+            font-family: "Gloria Hallelujah", cursive;
+        }
+
+        body {
+            background: url("../images/welcome_bg/kindeready-bg-3.png");
+        }
+
+        .col-lg-10 {
+            background-color: white;
+        }
+        
+        .btn, .modal {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+    
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="container" style="padding-top: 5px">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <!-- SideBar -->
+                    <div class="col-lg-2" style="border: 1px black; border-style: solid dashed solid solid; padding-top: 5px; background: url('https://www.toptal.com/designers/subtlepatterns/patterns/crossword.png')">
+                        <!-- Sidebar Content -->
+                        <!-- Avatar -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <img id="studentAvatar" src="" style="border-radius: 100px; border: 1px solid black; width: 100%; background-color: #ffffff; box-shadow: inset 0 0 8px #333333"/>
+                                <hr>
+                            </div>
+                        </div>
+                        <!-- Student Name -->
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h5><span id="studentName"></span></h5>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Student Awards/Badges -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Student Progress -->
+                                <div class="row">
+                                    <div class="col-lg-12 studentProgress">
+                                        <a href="/shapes/main" data-unit="1"><h6 style="color: black">Shapes & Colors:</h6></a>
+                                        <div class="progress">
+                                            <div id="SnC" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%""><span id="SnCActCount" style="color: white; font-weight: bold"></span></div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12 studentProgress">
+                                        <a href="/letter/main" data-unit="2"><h6 style="color: black">Letter Recognition:</h6></a>
+                                        <div class="progress">
+                                            <div id="letRec" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%; transition: width 1s; transition-timing-function: ease"><span id="letActCount" style="color: white; font-weight: bold"></span></div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <footer>
+                            <hr>
+                            <div class="col-lg-12 text-center">
+                                <a href="/change"><button id="chane" class="btn btn-sm btn-primary clearSession">Change Student</button></a>
+                            </div>
+                            <br>
+
+                            <div class="col-lg-12 text-center">
+                                <a href="/logout"><button id="logout" class="btn btn-sm btn-danger clearSession">Logout</button></a>
+                            </div>
+                            <br>
+                        </footer>
+
+                    </div>
+
+                    <div class="col-lg-10" style="border: 1px black; border-style: solid solid solid none; padding-top: 5px">
+                        <div class="row" style="padding-top: 10px">
+                            <div class="col-lg-6 text-left ">
+                                <h1>Letter Recognition</h1>
+                            </div>
+                            <div class="col-lg-6" style="position: absolute; top: 10px; right: 0">
+                                <div class="card text-white bg-dark mb-3" style="width: 30%; float: right">
+                                    <div class="card-header text-center"><em>Activity 1</em></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- Activity Description -->
+                        <div class="col-lg-12" style="font-family: 'Nunito', sans-serif">
+                            <em><strong>Activity Description:</strong></em>
+                                <ul type="square">
+                                    <li>Lesson Type: <strong>PG</strong> - Parent Guided</li>
+                                    <li>Estimated Time: 20 min</li>
+                                    <li>Instructions: Watch the video with your student.  Then listen to the audio.  Then try a sing along with your student.  Finally, see if your student can sing the song wihtout any prompts.</li>
+                                </ul>
+                            <hr>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <!-- <em><strong>Letter Recognition</strong> -->
+                                <ul type="square">
+                                    <li>Audio ABC Song:</li>
+                                    <br>
+                                    <audio controls>
+                                        <source src="../../../audio/alphabetsong.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio tag.
+                                    </audio>
+                                </ul>
+                            </em>
+                            <hr>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <!-- <em><strong>Letter Recognition</strong> -->
+                                <ul type="square">
+                                    <li>Video ABC Song:</li>
+                                    <br>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4_hgFcLM9Rg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        style="border: 1px solid black" allowfullscreen></iframe>
+                                </ul>
+                            </em>
+                            <hr>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <!-- <em><strong>Letter Recognition</strong> -->
+                                <ul type="square">
+                                    <li>Video ABC Phonics Song:</li>
+                                    <br>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1dNI74FZ6Vc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        style="border: 1px solid black" allowfullscreen></iframe>
+                                </ul>
+                            </em>
+                        </div>
+                        <!-- Back & Next Buttons -->
+                        <div class="col-lg-12" style="padding-bottom: 10px; padding-top: 10px">
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-2 text-left">
+                                    <a href="/letter/main"><button id="previousAct" class="btn btn-outline-dark btn-sm">&#8592; Previous</button></a>
+                                </div>
+
+                                <div class="col-lg-8"></div>
+
+                                <div class="col-lg-2 text-right">
+                                    <a href="/letter/act2"><button id="nextAct" data-act="act1" class="btn btn-outline-dark btn-sm">Next &#8594;</button></a>
+                                </div>
+                            </div>
+                        </div>
+              
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../../../js/sidebar.js"></script>
+    
+</body>
+
+</html>
